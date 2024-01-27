@@ -15,6 +15,7 @@ export default {
         "pale-black": "#000000BF",
         "pale-gray": "#D9D9D9",
         cyan: "#4EE1A0",
+        alert: "#f86c59"
       },
       screens: {
         desktop: { max: "1030px" },

@@ -4,7 +4,13 @@ const { img, name, technology } = Astro.props;
 
 <article>
   <picture class="relative">
-    <img src={img} alt=`${name} Project` class="mb-[20px]" />
+    <img
+      src={img}
+      alt=`${name} Project`
+      class="mb-[20px]"
+      width="538"
+      height="398"
+    />
     <div
       class="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-pale-black opacity-0 hover:opacity-100 duration-200 tablet:hidden"
     >

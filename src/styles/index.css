@@ -17,19 +17,10 @@
   font-weight: 700;
 }
 
-input {
-  background: none;
-  outline: none;
-}
-
-.alert {
-  border-bottom: 1px solid #f86c59;
-}
-
-input.alert {
-  background-image: url(/assets/icon-warning.svg);
-  background-repeat: no-repeat;
-  background-position: right center;
+@layer base {
+  input {
+    @apply w-full border-b-[1px] border-b-pale-gray pl-[22px] focus:border-b-cyan placeholder:text-pale-gray bg-transparent outline-none;
+  }
 }
 
 @layer components {
@@ -37,7 +28,11 @@ input.alert {
     @apply uppercase font-bold tracking-[2px] border-b-2 border-b-cyan pb-[10px] hover:text-cyan duration-200;
   }
 
-  .input {
-    @apply w-full border-b-[1px] border-b-pale-gray pl-[22px] focus:border-b-cyan placeholder:text-pale-gray;
+  .alert {
+    @apply border-b-2 border-b-alert;
+  }
+
+  .alert {
+    @apply bg-[url(/assets/icon-warning.svg)] bg-no-repeat bg-right;
   }
 }
