@@ -1,0 +1,31 @@
+---
+const { img, name, technology } = Astro.props;
+---
+
+<article>
+  <picture class="relative">
+    <img src={img} alt=`${name} Project` class="mb-[20px]" />
+    <div
+      class="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-pale-black opacity-0 hover:opacity-100 duration-200 tablet:hidden"
+    >
+      <div class="flex flex-col gap-[70px] text-center">
+        <a href="#" class="btn-primary">View project</a>
+        <a href="#" class="btn-primary">View code</a>
+      </div>
+    </div>
+  </picture>
+  <h3 class="text-2lg uppercase font-bold mb-[5px]">{name}</h3>
+  <div class="flex items-center gap-[20px]">
+    {
+      technology.map((tech) => (
+        <span class="uppercase font-semibold text-lg text-pale-gray ">
+          {tech.name}
+        </span>
+      ))
+    }
+  </div>
+  <div class="tablet:flex items-center gap-[35px] mt-[20px] hidden">
+    <a href="#" class="btn-primary">View project</a>
+    <a href="#" class="btn-primary">View code</a>
+  </div>
+</article>

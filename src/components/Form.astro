@@ -1,0 +1,45 @@
+<form action="" class="flex flex-col items-end">
+  <label for="name" class="sr-only">Name</label>
+  <input
+    type="text"
+    id="name"
+    class="input pb-[17px] pt-[21px]"
+    placeholder="NAME"
+  />
+  <label for="email" class="sr-only">Email</label>
+  <input
+    type="email"
+    id="email"
+    class="input pb-[17px] pt-[33px]"
+    placeholder="EMAIL"
+  />
+  <label for="message" class="sr-only">Message</label>
+  <input
+    type="text"
+    id="message"
+    class="input pt-[33px] pb-[80px]"
+    placeholder="MESSAGE"
+  />
+  <button type="submit" class="btn-primary mt-[35px]"> Send message</button>
+</form>
+
+<script>
+  const inputFields = document.querySelectorAll("input");
+  const contactForm = document.querySelector("form");
+
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    inputFields.forEach((inputField) => {
+      if (inputField.value === "") {
+        inputField.classList.add("alert");
+      }
+    });
+  });
+
+  inputFields.forEach((inputField) => {
+    inputField.addEventListener("focus", () => {
+      inputField.classList.remove("alert");
+    });
+  });
+</script>

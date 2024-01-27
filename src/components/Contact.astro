@@ -1,0 +1,25 @@
+---
+import Form from "./Form.astro";
+---
+
+<section class="relative">
+  <img
+    src="/assets/pattern-rings.svg"
+    alt=""
+    aria-hidden="true"
+    class="absolute left-[-18%] bottom-[-10%] desktop:hidden"
+  />
+  <div
+    class="container grid grid-cols-contact justify-between mt-[140px] pt-[68px] desktop:grid-cols-1 desktop:gap-[50px] desktop:text-center"
+  >
+    <article>
+      <h2 class="text-2xl font-bold tracking-[-0.4px] mb-[17px]">Contact</h2>
+      <p class="text-lg text-pale-gray">
+        I would love to hear about your project and how I could help. Please
+        fill in the form, and I’ll get back to you as soon as possible.
+      </p>
+    </article>
+
+    <Form />
+  </div>
+</section>

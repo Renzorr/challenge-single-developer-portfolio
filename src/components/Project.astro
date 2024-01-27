@@ -1,0 +1,60 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+const PROJECTS = {
+  projects: [
+    {
+      img: "/assets/thumbnail-project-1-large.webp",
+      name: "Design Portfolio",
+      stack: [{ name: "Html" }, { name: "Css" }],
+    },
+    {
+      img: "/assets/thumbnail-project-2-large.webp",
+      name: "E-Learning Landing Page",
+      stack: [{ name: "Html" }, { name: "Css" }],
+    },
+    {
+      img: "/assets/thumbnail-project-3-large.webp",
+      name: "Todo Web App",
+      stack: [{ name: "Html" }, { name: "Css" }, { name: "Javascript" }],
+    },
+    {
+      img: "/assets/thumbnail-project-4-large.webp",
+      name: "Entertainment Web App",
+      stack: [{ name: "Html" }, { name: "Css" }, { name: "Javascript" }],
+    },
+    {
+      img: "/assets/thumbnail-project-5-large.webp",
+      name: "Memory Game",
+      stack: [{ name: "Html" }, { name: "Css" }, { name: "Javascript" }],
+    },
+    {
+      img: "/assets/thumbnail-project-6-large.webp",
+      name: "Art Gallery Showcase",
+      stack: [{ name: "Html" }, { name: "Css" }, { name: "Javascript" }],
+    },
+  ],
+};
+---
+
+<section class="container mt-[124px]">
+  <div class="flex items-center justify-between mb-[60px]">
+    <h2 class="text-2xl font-bold tracking-[-0.4px]">Projects</h2>
+    <a href="#" class="btn-primary">Contact me</a>
+  </div>
+  <div
+    class="grid grid-cols-project justify-between gap-y-[70px] gap-x-[20px] tablet:grid-cols-1"
+  >
+    {
+      PROJECTS.projects.map((project) => {
+        return (
+          <ProjectCard
+            img={project.img}
+            name={project.name}
+            technology={project.stack}
+          />
+        );
+      })
+    }
+  </div>
+</section>

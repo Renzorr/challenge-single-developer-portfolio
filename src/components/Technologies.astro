@@ -1,0 +1,57 @@
+---
+import TechnologyCard from "./TechnologyCard.astro";
+
+const STACK = [
+  {
+    technology: "HTML",
+    years: 4,
+  },
+  {
+    technology: "CSS",
+    years: 4,
+  },
+  {
+    technology: "Javascript",
+    years: 4,
+  },
+  {
+    technology: "Accessibility",
+    years: 4,
+  },
+  {
+    technology: "React",
+    years: 3,
+  },
+  {
+    technology: "Sass",
+    years: 3,
+  },
+];
+---
+
+<section
+  class="relative border-t border-t-pale-gray mt-[230px] desktop:mt-[100px]"
+>
+  <img
+    src="/assets/pattern-rings.svg"
+    alt=""
+    aria-hidden="true"
+    class="absolute right-[-15%] bottom-[-18%] desktop:hidden"
+  />
+  <div
+    class="container grid grid-cols-3 gap-x-[30px] gap-y-[52px] pt-[65px] desktop:grid-cols-2 tablet:grid-cols-1"
+  >
+    {
+      STACK.map((element) => {
+        return (
+          <TechnologyCard
+            technology={element.technology}
+            years={element.years}
+          />
+        );
+      })
+    }
+  </div>
+</section>
+
+<style></style>
